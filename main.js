@@ -92,7 +92,7 @@ function loginGame(){
 //create new player
 function createNewPlayer(playerName){
     let items = [
-        new Item("Flip machine","./img/flip machine.png",15000,150, 0,25,"ability"),
+        new Item("Flip machine","./img/flip machine.png",15000,500, 0,25,"ability"),
         new Item("ETF Stock","./img/etf.png", 300000,Infinity, 0,0.1,"investment"),
         new Item("ETF Bonds","./img/etf.png",300000,Infinity, 0, 0.07,"investment"),
         new Item("Lemonade Stand","./img/lemonade.png",30000,1000,0, 30,"realState"),
@@ -104,7 +104,7 @@ function createNewPlayer(playerName){
         new Item("Hotel Skyscraper","./img/Hotel Skyscraper.jpg",10000000000,5,0,25000000,"realState"),
         new Item("Bullet-Speed Sky Railway","./img/Bullet-Speed Sky Railway.jpg",10000000000000,1,0,30000000000,"realState")   
     ];
-    let player = new Player(playerName,20,1,50000000000,items,0);
+    let player = new Player(playerName,20,1,50000,items,0);
     return player;
 }
 
