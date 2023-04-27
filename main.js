@@ -18,7 +18,7 @@ class Player{
             this.money += 25 + item.howManyPurchased * item.makeMoney;
         }
         else if(item == this.items[1]){
-            this.money += Math.pow(1.001 * item.howManyPurchased * item.price);
+            this.money += (1.001 * item.howManyPurchased * item.price);
         }
         else if (item == this.items[2]){
             this.money += (1.007 * item.howManyPurchased * item.price);
@@ -48,21 +48,6 @@ class Item{
     }
 }
 
-//select "New game" or "Load game" 
-/*
-function selectGameType(){
-    let newBtn = config.startPage.querySelectorAll("#newBtn")[0]
-    newBtn.addEventListener("click",function(){
-        newGame();
-    });
-
-    let loginBtn = config.startPage.querySelectorAll("#loginBtn")[0]
-    loginBtn.addEventListener("click",function(){
-        loginGame();
-    });
-}
-*/
-
 //if you push "New"
 function newGame(){
     let playerName = config.startPage.querySelectorAll(`input[name="playerName"]`)[0].value;
@@ -85,7 +70,8 @@ function loginGame(){
         alert("セーブデータがありません");
         return false;
     }
-    let playerAccount = JSON.parse(localStorage.getItem(playerName));
+    let json = JSON.parse(localStorage.getItem(playerName));
+    let playerAccount = Object.assign(new Player(), json)
     startGame(playerAccount);
 }
 
@@ -222,10 +208,11 @@ function saveGame(playerAccount){
     let playerName = playerAccount.name;
     let jsonPlayerData = JSON.stringify(playerAccount);
     localStorage.setItem(playerName,jsonPlayerData);
-    alert("セーブしました！");
-    clearInterval(playerAccount.timer);
-    config.mainPage.innerHTML = "";
-    config.startPage.classList.remove("d-none");
+    if(window.confirm("セーブして、ゲームを止めますか？")){
+        clearInterval(playerAccount.timer);
+        config.mainPage.innerHTML = "";
+        config.startPage.classList.remove("d-none");
+    }
 }
 
 //reset game
