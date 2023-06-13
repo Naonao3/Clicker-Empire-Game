@@ -1,5 +1,5 @@
 # Clicker-Empire-Game
-Recursionのproject3最終課題
+
 
 ## 概要
 仕事や投資、不動産等でお金を稼ぐ「Clicker Empire Game」というシミュレーションゲームです。ゲームの目的は、一攫千金を目指し、街に帝国を築くことです。<br>
