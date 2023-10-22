@@ -11,9 +11,5 @@
 https://naonao3.github.io/Clicker-Empire-Game/
 
 ## プレビュー
-
-
-https://github.com/Naonao3/Clicker-Empire-Game/assets/97473345/255c5743-3379-4223-b3e5-6d77baf7dd91
-
 <img width="1031" alt="スクリーンショット 2023-10-22 125708" src="https://github.com/Naonao3/Clicker-Empire-Game/assets/97473345/31c61ff5-2204-45a2-a283-732ecb769234">
 <img width="998" alt="play " src="https://github.com/Naonao3/Clicker-Empire-Game/assets/97473345/19642148-4c68-4421-b1c0-46b240b75ea6">
