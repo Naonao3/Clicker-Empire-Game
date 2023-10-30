@@ -1,4 +1,4 @@
-# Clicker-Empire-Game
+# Clicker Empire Game
 
 
 ## 概要
